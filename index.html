@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <link rel="icon" type="image/png" href="http://mediad.publicbroadcasting.net/p/wsdl/files/201611/breast_cancer_creative_commons.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Guía cancer de mama</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> 
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Cáncer de mama</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">○ Inicio</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#callout">○ Definición</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">○ Síntomas</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">○ Cáncer en el mundo</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h3 class="mb-5">
+          <em>¿Aún no te has hecho la mamografía? Entonces:</em>
+        </h3>
+        <a class="btn btn-primary btn-lg js-scroll-trigger" href="#callout">comienza acá</a>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+ <!-- Callout -->
+ <section class="callout" id="callout">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+      <h1></h1>
+      <p> Este cáncer es el crecimiento anormal y desordenado de células del tejido mamario, formando un tumor maligno. Se ubica inicialmente en la mama, posteriormente puede extenderse a otros órganos, si es que es tratado a tiempo.
+        <br>  <br> <b>¿Qué relevancia tiene esta enfermedad? </b><br>  
+        En Chile, el cáncer de mama ocupa el primer lugar en mortalidad por cáncer en la mujer, siendo una de las enfermedades más diagnosticadas.
+        <br> <br> <b>¿Se puede curar un paciente al que se le detecta cáncer de mama?</b> <br>
+        Sí, en aquellas mujeres que se les ha detectado precozmente la enfermedad, generalmente se les puede ofrecer un tratamiento curativo. Mientras antes se realiza el diagnóstico, mayor es la probabilidad de curación. Cuando se encuentra tempranamente, hay una posibilidad de 96% de curación.
+        <br> <br> <b>¿Se puede prevenir el cáncer de mama?</b> <br>
+        Una parte de los cánceres de mama son prevenibles (usando quimioprofilaxis) y un número importante puede ser diagnosticado tempranamente (a través de la mamografía). </p>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="content-section bg-primary text-white text-center" id="services">
+  <div class="container" >
+    <div class="content-section-heading">
+      <h2 class="mb-5">Los síntomas más comunes son:</h2>
+    </div>
+    <div id="este"></div>
+
+    <div class="row" >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+        <script>
+
+            function setup() {
+              var canvas = createCanvas(960,230);
+              canvas.parent('este');
+              textAlign(CENTER);
+              textFont("Source Sans Pro");
+        }
+
+        function draw(){
+
+          background('#f2f2f2');
+
+          fill ("#fdcaba");
+          noStroke();
+          ellipse(80,100,160,160);
+          ellipse(346.667,100,160,160);
+          ellipse(613.333,100,160,160);
+          ellipse(880,100,160,160);
+
+           fill ("#fb98ab");
+          ellipse(80,100,35,35);
+          ellipse(346.667,100,35,35);
+          ellipse(613.333,100,35,35);
+          ellipse(880,100,35,35);
+
+
+          if (mouseX>23 && mouseX<137 && mouseY>43 && mouseY<156){
+            fill ("#fdcaba");
+            ellipse(143,73,40,40);
+            ellipse(155,102,40,40);
+            fill ("#f7144b");
+            textSize(20);
+            text("Bultos", 80, 220);
+          }
+
+          if (mouseX>290 && mouseX<403 && mouseY>43 && mouseY<156){
+            fill ("#f2f2f2");
+            ellipse(367,180,40,40);
+            ellipse(398,170,40,40);
+            fill ("#f7144b");
+            textSize(20);
+            text("Hoyuelos", 346, 220);
+          }
+
+          if (mouseX>557 && mouseX<670 && mouseY>43 && mouseY<156){
+            fill ("#f2b1a0");
+            ellipse(660,55,45,45);
+            fill ("#f7144b");
+            textSize(20);
+            text("Bultos con color", 613, 220);
+          }
+
+          if (mouseX>824 && mouseX<937 && mouseY>43 && mouseY<156){
+            fill ("#f7144b");
+            ellipse(886,120,12,31);
+            ellipse(874,137,6,15);
+            fill ("#f7144b");
+            textSize(20);
+            text("Secreción", 880, 220);
+          }
+
+        }
+</script>
+<div class="container text-center">
+<h7>Y la mejor forma de combatirlo es detectarlo a tiempo con autoexploración</h7>
+</div>
+    </div>
+  </div>
+</section>
+
+    <!-- About -->
+    <section class="content-section" id="about">
+      <div class="container text-center">
+        <div class="row">
+           <div class="col-lg-10 mx-auto">
+              <h5>¿Sabes cuántas mujeres padecen de cáncer de mama?</h5>
+              <p>  <button onClick="Aparecium()" class="btn btn-primary btn-sm">Averígualo aquí</button></p>
+              <div id="here" class="my-4">
+               <svg width="980" height="150">
+                 <g>
+                   <circle r="40" cx="40" cy="70" fill="#fdcaba"/>
+                   <circle r="40" cx="168.571" cy="70" fill="#fdcaba"/>
+                   <circle r="40" cx="297.143" cy="70" fill="#fdcaba"/>
+                   <ellipse cx="425.714" cy="70" rx="40" ry="40" fill="#fdcaba"/>
+                   <circle r="40" cx="554.286" cy="70" fill="#fdcaba"/>
+                   <circle r="40" cx="682.857" cy="70" fill="#fdcaba"/>
+                   <circle r="40" cx="811.429" cy="70" fill="#fdcaba"/>
+                   <circle r="40" cx="940" cy="70" fill="#fdcaba"/>
+
+                   <circle r="10" cx="40" cy="70" fill="#fb98ab"/>
+                   <circle r="10" cx="168.571" cy="70" fill="#fb98ab"/>
+                   <circle r="10" cx="297.143" cy="70" fill="#fb98ab"/>
+                   <circle r="10" cx="425.714" cy="70" fill="#fb98ab"/>
+                   <circle r="10" cx="554.286" cy="70" fill="#fb98ab"/>
+                   <circle r="10" cx="682.857" cy="70" fill="#fb98ab"/>
+                   <circle r="10" cx="811.429" cy="70" fill="#fb98ab"/>
+                   <circle r="10" cx="940" cy="70" fill="#fb98ab"/>
+
+                   <text x="470" y="140" font-size="18px" fill="#ff8fb2" >1 de cada 8 mujeres en el mundo</text> 
+                  </g>
+               </svg>
+              </div>
+           </div>
+           <script src="https://d3js.org/d3.v5.min.js"></script>
+           <script>
+             function Aparecium(){
+               d3.selectAll("ellipse").style('fill', 'RGB(244, 78, 78)')
+               d3.selectAll("ellipse").style('rx', '60')
+               d3.selectAll("ellipse").style('ry', '60')
+               d3.selectAll("text").style('fill', '#f44e4e')
+              }
+         
+           </script>
+           <!-- jQuery primero, luego Popper.js, y finalmente Bootstrap JS -->
+           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </section>
+
+        <!-- DATOSSSSS -->
+        <section>
+                <div class="row justify-content-center">
+                <h8>Hay <span id="2012"></span> personas fallecidas a causa de cáncer mamario en Chile hasta el año 2012.</h8>  
+                <ul id="cancer">
+                </ul>
+                </div>
+              </div>
+            </div>
+            <script>
+            var request = new XMLHttpRequest();
+            request.open('GET', 'https://raw.githubusercontent.com/romerobananas/archivos/master/csvjson.json', true);
+            request.onload = function () {
+              var data = JSON.parse(this.response);
+              var howMany = data.number;
+              //voy a crear una funcion
+              function loremIpsum(n) {
+                var que = [];
+                var donde = document.getElementById('cancer');
+                for (var x = 0; x < n; x++) {
+                  que[x] = document.createElement('li');
+                  que[x].textContent = data.people[x].name;
+                  donde.appendChild(que[x]);
+                }
+              };
+              //ahora voy a usar la función
+              loremIpsum(howMany);
+              document.getElementById("numero").innerHTML = howMany;
+            }
+            request.send();   
+            </script>
+            </section>
+        
+    
+    
+    <footer class="footer text-center">
+      <div class="container">
+        
+    <p class="text-muted small mb-0">Los datos ocupados en esta página son de Clínica Las Condes Chile.</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+
+  </body>
+
+</html>
